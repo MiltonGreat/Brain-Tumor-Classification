@@ -12,29 +12,16 @@ This project demonstrates how to classify brain MRI images into four categories 
 - Evaluate the model using classification metrics like accuracy, precision, recall, and F1-score.
 - Use Explainable AI techniques (LIME and SHAP) to visualize and interpret model predictions.
 
-### **Dataset**
+### Problem Statement
 
-This project uses a combination of datasets from the following sources:
+Brain tumors are life-threatening conditions that require timely and accurate diagnosis. However, traditional diagnostic processes can be time-intensive, subjective, and prone to errors due to human limitations. With the rise of deep learning, AI models can analyze medical images with remarkable accuracy and speed.
 
-1. **Figshare**
-2. **SARTAJ dataset**
-3. **Br35H dataset**
+This project aims to classify brain tumors from MRI scans into four categories: glioma, meningioma, no tumor, and pituitary tumor. Additionally, it uses explainability tools to ensure transparency in model predictions, building trust in AI-driven clinical decision-making.
 
-The dataset consists of:
+In medical applications, trust and reliability are critical. By highlighting the model’s decision-making process through SHAP and LIME, this project addresses a vital gap in AI adoption in healthcare.
 
-- **7,023 MRI images** of human brains.
-- **4 Classes**:
-  - **Glioma**
-  - **Meningioma**
-  - **No Tumor** (images taken from the Br35H dataset)
-  - **Pituitary Tumor**
+### Solution Approach
 
-The images are organized into separate folders for training and testing:
-
-- **Training Dataset**: 5,712 images
-- **Testing Dataset**: 1,311 images
-
-### Project Workflow
 ##### **1. Data Preprocessing**
 - Crop the brain region by detecting contours in MRI scans.
 - Resize the cropped images to **256x256 pixels**.
@@ -73,6 +60,12 @@ The images are organized into separate folders for training and testing:
 - Use **SHAP (SHapley Additive exPlanations)** to interpret model predictions.
 - Use **LIME (Local Interpretable Model-agnostic Explanations)** to highlight regions contributing to predictions.
 
+### Key Findings
+
+- Strengths: High accuracy in detecting “No Tumor” and “Pituitary Tumor” classes.
+- Challenges: Underperformance in “Meningioma” classification due to data imbalance.
+- Impact: Demonstrated the feasibility of using CNNs for medical image classification with transparent decision-making.
+
 ### **Key Results**
 
 - **Model Architecture**:
@@ -83,6 +76,13 @@ The images are organized into separate folders for training and testing:
 - **Visualization**:
   - Training History: Plotted accuracy and loss over epochs.
   - Confusion Matrix: Visualized classification performance across all classes.
+
+### Future Directions
+
+- Incorporate Real-Time Data: Extend the model to analyze live MRI scans for real-time diagnostics.
+- Enhance Data Diversity: Use larger, more diverse datasets to improve generalization across demographics.
+- Expand Explainability: Combine SHAP and LIME with Grad-CAM to provide more granular explanations.
+- Clinical Integration: Test the model in a clinical setting to evaluate its performance under real-world conditions.
 
 ### Source
 
